@@ -3,15 +3,24 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+    "jsx": "react-native", // Ensures correct JSX factory
+    "lib": ["esnext"], // Ensures compatibility with modern JavaScript features
+    "skipLibCheck": true // Speeds up the compilation process by skipping type checks on library files
   },
   "include": [
+    "src/**/*",
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "app/**/*.tsx"
+, "app/_layout.jsx", "app/index.jsx", "app/profile.jsx"  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
   ]
 }

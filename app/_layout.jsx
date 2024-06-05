@@ -1,5 +1,4 @@
-import { Slot, Stack } from 'expo-router'
-import { Text } from 'react-native-reanimated/lib/typescript/Animated'
+import { Stack } from 'expo-router'
 
 const RootLayout = () => {
   return (
