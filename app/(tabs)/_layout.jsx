@@ -36,7 +36,9 @@ const TabsLayout = () => {
             borderTopColor: '#232533',
             height: 84,
           }
-         }}>
+        }}>
+        
+        {/* Home */}
         <Tabs.Screen name='home'
           options={{
             title: 'Home',
@@ -52,7 +54,7 @@ const TabsLayout = () => {
           }}
         />
 
-        // search
+        {/* Search */}
         <Tabs.Screen name='search'
           options={{
             title: 'Search',
@@ -68,7 +70,7 @@ const TabsLayout = () => {
           }}
         />
 
-        // profile
+        {/* Profile */}
         <Tabs.Screen name='profile'
           options={{
             title: 'Profile',
