@@ -1,7 +1,9 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CustomButton from "../components/CustomButton";
 
 import { images } from "../constants";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
@@ -17,7 +19,7 @@ export default function App() {
 
           <Image
             source={images.pnl}
-            className="max-w--[380px] w-full h-[300px]"
+            className="max-w-[380px] w-full h-[300px]"
             resizeMode="contain"
           />
           <View className="relative mt-5">
@@ -28,9 +30,16 @@ export default function App() {
             <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
             Exercitation nostrud amet ex voluptate proident mollit reprehenderit ut pariatur elit culpa.
             </Text>
+
+            <CustomButton
+              title="Continue with Email"
+              handlePress={() => { }}
+              containerStyles="w-full mt-7"
+            />
           </View>
         </View>
       </ScrollView>
+      <StatusBar backgroundColor="#161622" hidden={false} style="light" />
     </SafeAreaView>
   );
 }
