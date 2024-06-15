@@ -1,7 +1,7 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../components/CustomButton";
-
+import { Redirect, router } from "expo-router";
 import { images } from "../constants";
 import { StatusBar } from "expo-status-bar";
 
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <SafeAreaView className="bg-black h-full">
       <ScrollView contentContainerStyle={{ height: '100%' }}>
-        <View className="w-full justify-center items-center h-full px-4">
+        <View className="w-full justify-center items-center min-h-[85vh] px-4">
 
           <Image
             source={images.zidane}
@@ -33,7 +33,7 @@ export default function App() {
 
             <CustomButton
               title="Continue with Email"
-              handlePress={() => {}}
+              handlePress={() => router.push('/sign-in')}
               containerStyles="mt-7"
             />
           </View>
