@@ -33,8 +33,8 @@ export default function App() {
 
             <CustomButton
               title="Continue with Email"
-              handlePress={() => { }}
-              containerStyles="w-full mt-7"
+              handlePress={() => {}}
+              containerStyles="mt-7"
             />
           </View>
         </View>
