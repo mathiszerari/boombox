@@ -20,7 +20,7 @@ const [showPassword, setShowPassword] = useState(false)
           secureTextEntry={title === 'Password' && !showPassword}
         />
 
-        {form.password.length > 0 && title === 'Password' && (
+        {title === 'Password' && value.length > 0 && (
           <TouchableOpacity
             onPress={() => setShowPassword(!showPassword)}>
             <Image
