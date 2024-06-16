@@ -16,7 +16,7 @@ const SignIn = () => {
   const [isSubmitting, setisSubmitting] = useState(false)
 
   const submit = () => { 
-    console.log(form);
+    console.log(form)
   }
 
   return (

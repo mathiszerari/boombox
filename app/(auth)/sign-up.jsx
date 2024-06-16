@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, Alert } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import { useState } from 'react'
@@ -17,9 +17,25 @@ const SignUp = () => {
 
   const [isSubmitting, setisSubmitting] = useState(false)
 
-  const submit = () => { 
-    console.log(form);
-    createUser()
+  const submit = async () => { 
+    if (!form.username || !form.email || !form.password) {
+      Alert.alert('Error', 'Please fill in all fields')
+    }
+
+    console.log(form)
+    setisSubmitting(true)
+    
+    try {
+      const result = createUser(form.email, form.password, form.username)
+
+      console.log(result)
+
+      router.replace('/home')
+    } catch (error) {
+      Alert.alert('Error', error.message)
+    } finally {
+      setisSubmitting(false)
+    }
   }
 
   return (

@@ -1,9 +1,9 @@
-import { Image, ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import CustomButton from "../components/CustomButton";
-import { Redirect, router } from "expo-router";
-import { images } from "../constants";
-import { StatusBar } from "expo-status-bar";
+import { Image, ScrollView, Text, View } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context"
+import CustomButton from "../components/CustomButton"
+import { router } from "expo-router"
+import { images } from "../constants"
+import { StatusBar } from "expo-status-bar"
 
 export default function App() {
   return (
@@ -41,5 +41,5 @@ export default function App() {
       </ScrollView>
       <StatusBar backgroundColor="#161622" hidden={false} style="light" />
     </SafeAreaView>
-  );
+  )
 }

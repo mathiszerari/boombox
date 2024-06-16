@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router'
 import { Image, View, Text, TouchableOpacity } from 'react-native'
 import { icons } from '../../constants'
-import * as Haptics from 'expo-haptics';
+import * as Haptics from 'expo-haptics'
 import React from 'react'
 
 const TabIcon = ({ icon, color, name, focused }) => {
@@ -25,9 +25,9 @@ const TabIcon = ({ icon, color, name, focused }) => {
 
 const TabsLayout = () => {
   const handlePress = async (navigate) => {
-    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    navigate();
-  };
+    await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
+    navigate()
+  }
 
   return (
     <>
